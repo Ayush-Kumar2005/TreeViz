@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVL Tree Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>AVL Tree Visualizer</h1>
+      <p>Explore AVL Tree insertion, deletion, balancing, and traversal operations with real-time visual feedback.</p>
+    </header>
+
+    <section class="controls">
+
+      <div class="control-group">
+        <label for="valueInput">Value</label>
+        <input id="valueInput" type="number" placeholder="Enter number" />
+      </div>
+
+      <div class="button-row">
+        <button id="insertBtn">Insert</button>
+        <button id="deleteBtn" class="danger">Delete</button>
+        <button id="randomBtn">Insert Random</button>
+        <button id="clearBtn" class="danger">Clear</button>
+      </div>
+
+      <div class="button-row">
+        <button id="inorderBtn">Inorder</button>
+        <button id="preorderBtn">Preorder</button>
+        <button id="postorderBtn">Postorder</button>
+        <button id="levelorderBtn">Level Order</button>
+      </div>
+
+    </section>
+
+    <section class="status-panel">
+      <p><strong>Status:</strong> <span id="statusText">Ready</span></p>
+      <p><strong>Traversal:</strong> <span id="traversalText">-</span></p>
+    </section>
+
+    <section class="canvas-wrap">
+      <svg
+        id="treeSvg"
+        viewBox="0 0 1200 650"
+        preserveAspectRatio="xMidYMid meet">
+      </svg>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
